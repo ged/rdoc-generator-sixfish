@@ -14,6 +14,9 @@ SIXFISH_MIN_JS = 'data/rdoc-generator-sixfish/js/sixfish.min.js'
 SIXFISH_SCSS = 'ui/sixfish.scss'
 SIXFISH_JS = 'ui/sixfish.js'
 
+task :gemspec => :assets
+task :gem => :assets
+
 
 tasks = Rake::DevEiate.setup( 'rdoc-generator-sixfish' ) do |project|
 	project.version_from = 'lib/sixfish.rb'
@@ -25,7 +28,6 @@ CLEAN.add( '*.gem' )
 
 Rake::Task['docs'].clear
 task :docs => :assets
-task :gemspec => :assets
 
 RDoc::Task.new( 'docs' ) do |rdoc|
 	rdoc.main = tasks.readme_file.to_s

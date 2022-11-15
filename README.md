@@ -16,7 +16,7 @@ docs
 
 ## Description
 
-A readable HTML generator for RDoc. It uses the {Bulma}[https://bulma.io/] CSS framework.
+A readable HTML generator for RDoc. It uses the [Bulma](https://bulma.io/) CSS framework.
 
 
 ## Installation
@@ -31,9 +31,9 @@ A readable HTML generator for RDoc. It uses the {Bulma}[https://bulma.io/] CSS f
 
 ## Contributing
 
-You can check out the current development source {with
-Mercurial}[http://bitbucket.org/ged/sixfish], or if you prefer Git, via the
-project's {Github mirror}[https://github.com/ged/Sixfish-RDoc].
+You'll need [Yarn](https://yarnpkg.com/) to build this gem.
+
+You can check out the current development source [with Mercurial](https://hg.sr.ht/~ged/Sixfish)], or if you prefer Git, via the project's [Github mirror](https://github.com/ged/sixfish).
 
 After checking out the source and changing into the new directory, run:
 

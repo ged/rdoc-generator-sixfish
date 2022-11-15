@@ -84,27 +84,31 @@ describe RDoc::Generator::Sixfish do
 		end
 
 
-		it "combines an index template with the layout template to make the index page" do
-			layout_template = get_fixtured_layout_template_mock()
-
+		it "uses the index template to make the index page" do
 			index_template = double( "index template" )
 			expect( Inversion::Template ).to receive( :load ).
 				with( 'index.tmpl', encoding: 'utf-8' ).
 				and_return( index_template )
 
 			expect( index_template ).to receive( :dup ).and_return( index_template )
+			expect( index_template ).to receive( :files= ).with( [@top_level] ).once
+			expect( index_template ).to receive( :classes= ).
+				with( @store.all_classes_and_modules.sort )
+			expect( index_template ).to receive( :methods= ).
+				with( @store.all_classes_and_modules.flat_map(&:method_list).sort )
+			expect( index_template ).to receive( :modsort= ) do |sorted_mods|
+				expect( sorted_mods ).to include( @store.find_class_named('Klass') )
+			end
+			expect( index_template ).to receive( :rdoc_options= ).with( @options )
+			expect( index_template ).to receive( :rdoc_version= ).with( RDoc::VERSION )
+			expect( index_template ).to receive( :sixfish_version= ).with( Sixfish.version_string )
 			expect( index_template ).to receive( :mainpage= ).with( @readme )
 			expect( index_template ).to receive( :synopsis= ).
-				with( %{<h1 id="label-Testing+README">Testing <a href="README_md} +
-				      %{.html">README</a><span><a href="#label-Testing+README">} +
-				      %{&para;</a> <a href="#top">&uarr;</a></span></h1>} +
-				      %{<p>This is a readme for testing.</p>} )
+				with( %{<p>This is a readme for testing.</p>} )
+			expect( index_template ).to receive( :rel_prefix= ).with( Pathname('.') ).once
+			expect( index_template ).to receive( :pageclass= ).with( 'index-page' )
 
-			expect( layout_template ).to receive( :contents= ).with( index_template )
-			expect( layout_template ).to receive( :pageclass= ).with( 'index-page' )
-			expect( layout_template ).to receive( :rel_prefix= ).with( Pathname('.') )
-
-			expect( layout_template ).to receive( :render ).and_return( 'Index page!' )
+			expect( index_template ).to receive( :render ).and_return( "Index page!" )
 
 			@generator.generate_index_page
 		end
@@ -151,8 +155,7 @@ describe RDoc::Generator::Sixfish do
 			expect( file_template ).to receive( :dup ).and_return( file_template )
 			expect( file_template ).to receive( :header= ).
 				with( %{<h1 id="label-Testing+README">Testing <a href="README_md} +
-				      %{.html">README</a><span><a href="#label-Testing+README">} +
-				      %{&para;</a> <a href="#top">&uarr;</a></span></h1>} )
+				      %{.html">README</a></h1>} )
 			expect( file_template ).to receive( :description= ).
 				with( %{\n<p>This is a readme for testing.</p>\n\n<p>It has some more} +
 				      %{ stuff</p>\n\n<p>And even more stuff.</p>\n} )
@@ -228,10 +231,12 @@ describe RDoc::Generator::Sixfish do
 			with( 'layout.tmpl', encoding: 'utf-8' ).
 			and_return( layout_template )
 
+		allow( layout_template ).to receive( :synopsis= )
+
 		# Work around caching
 		expect( layout_template ).to receive( :dup ).and_return( layout_template )
 
-		expect( layout_template ).to receive( :files= ).with( [@readme, @top_level] )
+		expect( layout_template ).to receive( :files= ).with( [@top_level] )
 		expect( layout_template ).to receive( :classes= ).
 			with( @store.all_classes_and_modules.sort )
 		expect( layout_template ).to receive( :methods= ).
@@ -239,6 +244,7 @@ describe RDoc::Generator::Sixfish do
 		expect( layout_template ).to receive( :modsort= ) do |sorted_mods|
 			expect( sorted_mods ).to include( @store.find_class_named('Klass') )
 		end
+		expect( layout_template ).to receive( :mainpage= ).with( @readme )
 		expect( layout_template ).to receive( :rdoc_options= ).with( @options )
 		expect( layout_template ).to receive( :rdoc_version= ).with( RDoc::VERSION )
 		expect( layout_template ).to receive( :sixfish_version= ).with( Sixfish.version_string )

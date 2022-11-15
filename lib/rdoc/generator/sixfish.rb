@@ -27,15 +27,12 @@ class RDoc::Generator::Sixfish
 
 	# The data directory in the project if that exists, otherwise the gem datadir
 	DATADIR = if ENV['SIXFISH_DATADIR']
-			Pathname( ENV['SIXFISH_DATADIR'] ).expand_path( Pathname.pwd )
-		elsif File.directory?( 'data/rdoc-generator-sixfish' )
-			Pathname( 'data/rdoc-generator-sixfish' ).expand_path( Pathname.pwd )
-		elsif path = Gem.latest_spec_for( 'rdoc-generator-sixfish' )&.datadir
-			Pathname( path )
-		elsif path = Gem::Specification.find_by_name( 'rdoc-generator-sixfish' )&.datadir
-			Pathname( path )
+			Pathname( ENV['SIXFISH_DATADIR'] )
+		elsif Gem.loaded_specs[ 'rdoc-generator-sixfish' ] &&
+			File.exist?( Gem.loaded_specs['rdoc-generator-sixfish'].datadir )
+			Pathname( Gem.loaded_specs['rdoc-generator-sixfish'].datadir )
 		else
-			raise ScriptError, "can't find the data directory!"
+			Pathname( __FILE__ ).dirname.parent + 'data/rdoc-generator-sixfish'
 		end
 
 	# Register with RDoc as an alternative generator
@@ -153,26 +150,15 @@ class RDoc::Generator::Sixfish
 	def generate_index_page
 		self.log.debug "Generating index page"
 		template = self.load_template( 'index.tmpl' )
-
-		template.files   = @files
-		template.classes = @classes
-		template.methods = @methods
-		template.modsort = @modsort
-		template.rdoc_options = @options
-
-		template.rdoc_version = RDoc::VERSION
-		template.sixfish_version = Sixfish.version_string
+		self.set_toplevel_variables( template )
 
 		out_file = self.output_dir + 'index.html'
 		out_file.dirname.mkpath
 
-		self.set_toplevel_variables( template )
-
 		template.rel_prefix = self.output_dir.relative_path_from( out_file.dirname )
 		template.pageclass = 'index-page'
 
-		output = template.render
-		out_file.open( 'w', 0644 ) {|io| io.print(output) }
+		out_file.open( 'w', 0644 ) {|io| io.print(template.render) }
 	end
 
 

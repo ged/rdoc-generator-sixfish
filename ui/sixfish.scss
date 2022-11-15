@@ -1,0 +1,152 @@
+
+$family-monospace: "Input Mono", "Source Code Pro", monospace;
+
+@import "./node_modules/bulma/bulma.sass";
+
+@import "../fontawesome-pro/scss/fontawesome.scss";
+@import "../fontawesome-pro/scss/solid.scss";
+
+main {
+	
+	&.columns.section {
+		padding: 0;
+	}
+
+	.column {
+		padding: 4em 2em;
+	}
+}
+
+
+nav.index {
+	
+	&.column {
+		padding-top: 6vh;
+		background-color: #eee;
+		border-right: 2px solid #e3e3e3;
+	}
+	aside.menu {
+		margin-bottom: 1.5em;
+		overflow: hidden;
+	}
+}
+
+
+li.method {
+	.method-parent {
+		color: #777;
+		font-size: 0.8em;
+	}
+
+	.method-parent:before {
+		content: "  ";
+	}
+}
+
+
+table.note-list, table.class-metadata {
+	float: right;
+	width: inherit;
+}
+
+.title-links a {
+	font-size: 0.60em;
+	color: #ddd;
+	vertical-align: top;
+}
+.title-links:hover a {
+	color: #900;
+}
+
+
+h2.module-type {
+	color: white;
+	background-color: #006;
+	display: inline-block;
+	padding: 1px 8px;
+	
+}
+
+h2.namespace {
+	color: #999;
+}
+
+section.api section {
+	padding: 1em 0;
+}
+
+.content dl {
+	
+	dt {
+		font-weight: bold;
+		font-family: $family-monospace;
+	}
+
+	&.attributes {
+		.attribute-access-type {
+			font-size: 0.8em;
+			vertical-align: top;
+			border: 1px dotted;
+			padding: 1px 2px;
+			
+			&.r { color: $success; background-color: $success-light; }
+			&.w { color: $warning; background-color: $warning-light; }
+			&.rw { color: $danger; background-color: $danger-light; }
+		}
+	}
+	
+}
+
+a[name]:has(+ div.method) {
+	display: none;
+}
+
+table.class-metadata {
+	ul {
+		margin-top: 0;
+		margin-left: 0;
+		list-style: none;
+	}
+}
+
+div.method i {
+	cursor: hand;
+}
+div.method-source-code {
+	display: none;
+}
+
+pre.message-body code {
+	background-color: inherit;
+}
+div.method {
+	header { font-weight: bold; font-family: $family-monospace; }
+	.method-description { margin-bottom: 1.5em; }
+}
+
+
+//
+// Code highlighting
+//
+
+div.method-source-code pre, .description pre, pre.ruby {
+	overflow: auto;
+	color: #586e75;
+	padding: 0.5em;
+	border-radius: 5px;
+	border-color: transparent;
+	box-shadow: 0 0 8px rgba(25,25,25, 0.2);
+	background-color: #fdf6e3;
+}
+
+/* Source highlight colors courtesy of Solarized (http://ethanschoonover.com/solarized) */
+.ruby-constant   { color: #586e75; background: transparent; }
+.ruby-keyword    { color: #1360a9; background: transparent; font-weight: bold; }
+.ruby-ivar       { color: #2aa198; background: transparent; }
+.ruby-operator   { color: #859900; background: transparent; }
+.ruby-identifier { color: #1d544c; background: transparent; }
+.ruby-node       { color: #a73407; background: transparent; }
+.ruby-comment    { color: #dc322f; background: transparent;	font-style: italic; }
+.ruby-regexp     { color: #ffa07a; background: transparent; }
+.ruby-value      { color: #009705; background: transparent; }
+.ruby-string     { color: #657b83; background-color: rgba(190, 190, 190, 0.35); }

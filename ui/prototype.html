@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Pushdown</title>
+
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../data/rdoc-generator-sixfish/css/sixfish.css">
+</head>
+<body>
+
+	<main class="columns section">
+
+		<nav class="index column is-one-quarter">
+
+			<div class="field">
+				<p class="control has-icons-left">
+					<input class="input is-rounded" type="text" placeholder="Search">
+					<span class="icon is-small is-left">
+						<i class="fa-solid fa-search"></i>
+					</span>
+				</p>
+			</div>
+
+			<aside class="menu">
+				<p class="menu-label">Files</p>
+
+				<ul id="file-index" class="menu-list">
+					<li class="file"><a href="History_md.html">History</a></li>
+					<li class="file"><a href="LICENSE_txt.html">LICENSE</a></li>
+					<li class="file"><a class="is-active" href="README_md.html">README</a></li>
+				</ul>
+			</aside>
+
+			<aside class="menu">
+				<p class="menu-label">Classes/Modules</p>
+
+				<ul id="class-index" class="menu-list">
+					<li><a href="./Pushdown.html">Pushdown</a></li>
+					<li><a href="./Pushdown/Automaton.html">Pushdown::Automaton</a></li>
+					<li><a href="./Pushdown/Automaton/InstanceMethods.html">Pushdown::Automaton::InstanceMethods</a></li>
+					<li><a href="./Pushdown/SpecHelpers/StateTransitionMatcher.html">Pushdown::SpecHelpers::StateTransitionMatcher</a></li>
+					<li><a href="./Pushdown/State.html">Pushdown::State</a></li>
+					<li><a href="./Pushdown/Transition.html">Pushdown::Transition</a></li>
+					<li><a href="./Pushdown/Transition/Pop.html">Pushdown::Transition::Pop</a></li>
+					<li><a href="./Pushdown/Transition/Push.html">Pushdown::Transition::Push</a></li>
+					<li><a href="./Pushdown/Transition/Replace.html">Pushdown::Transition::Replace</a></li>
+					<li><a href="./Pushdown/Transition/Switch.html">Pushdown::Transition::Switch</a></li>
+				</ul>
+			</aside>
+
+			<aside class="menu">
+				<p class="menu-label">Methods</p>
+
+				<ul id="method-index" class="menu-list">
+					<li class="method">
+						<a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-extended">
+							::extended
+							<span class="method-parent">[::Automaton]</span>
+						</a>
+					</li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-generate_event_method">::generate_event_method<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-generate_initial_state_method">::generate_initial_state_method<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-generate_shadow_update_method">::generate_shadow_update_method<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-generate_state_method">::generate_state_method<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-generate_update_method">::generate_update_method<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-c-inherited">::inherited<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition" href="Pushdown/Transition.html#method-c-inherited">::inherited<span class="method-parent">[::Transition]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-c-install_state_methods">::install_state_methods<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-c-new">::new<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition" href="Pushdown/Transition.html#method-c-new">::new<span class="method-parent">[::Transition]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton::InstanceMethods" href="Pushdown/Automaton/InstanceMethods.html#method-c-new">::new<span class="method-parent">[::InstanceMethods]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Replace" href="Pushdown/Transition/Replace.html#method-c-new">::new<span class="method-parent">[::Replace]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Switch" href="Pushdown/Transition/Switch.html#method-c-new">::new<span class="method-parent">[::Switch]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Push" href="Pushdown/Transition/Push.html#method-c-new">::new<span class="method-parent">[::Push]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-c-new">::new<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-c-register_transition">::register_transition<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-c-type_name">::type_name<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Switch" href="Pushdown/Transition/Switch.html#method-i-apply">#apply<span class="method-parent">[::Switch]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Replace" href="Pushdown/Transition/Replace.html#method-i-apply">#apply<span class="method-parent">[::Replace]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Push" href="Pushdown/Transition/Push.html#method-i-apply">#apply<span class="method-parent">[::Push]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition::Pop" href="Pushdown/Transition/Pop.html#method-i-apply">#apply<span class="method-parent">[::Pop]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition" href="Pushdown/Transition.html#method-i-apply">#apply<span class="method-parent">[::Transition]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-correct_target_state-3F">#correct_target_state?<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-correct_transition_type-3F">#correct_transition_type?<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-describe_additional_expectations">#describe_additional_expectations<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-describe_failure">#describe_failure<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-describe_negated_failure">#describe_negated_failure<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-description">#description<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-failure_message">#failure_message<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-failure_message_when_negated">#failure_message_when_negated<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton::InstanceMethods" href="Pushdown/Automaton/InstanceMethods.html#method-i-handle_pushdown_result">#handle_pushdown_result<span class="method-parent">[::InstanceMethods]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-matches-3F">#matches?<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-matches_additional_expectations-3F">#matches_additional_expectations?<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-on_an_event">#on_an_event<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-on_event">#on_event<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-on_event">#on_event<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-on_pause">#on_pause<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-on_resume">#on_resume<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-on_start">#on_start<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-on_stop">#on_stop<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-on_update">#on_update<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-i-pushdown_inferred_state_class">#pushdown_inferred_state_class<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-i-pushdown_pluggable_state_class">#pushdown_pluggable_state_class<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-i-pushdown_state">#pushdown_state<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::Automaton" href="Pushdown/Automaton.html#method-i-pushdown_state_class">#pushdown_state_class<span class="method-parent">[::Automaton]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-shadow_update">#shadow_update<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-to">#to<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-to_state">#to_state<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-transition">#transition<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers" href="Pushdown/SpecHelpers.html#method-i-transition">#transition<span class="method-parent">[::SpecHelpers]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-type_name">#type_name<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::Transition" href="Pushdown/Transition.html#method-i-type_name">#type_name<span class="method-parent">[::Transition]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-unknown">#unknown<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::State" href="Pushdown/State.html#method-i-update">#update<span class="method-parent">[::State]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-update_ran_without_error-3F">#update_ran_without_error?<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-update_returned_transition-3F">#update_returned_transition?<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-via">#via<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+					<li class="method"><a title="Pushdown::SpecHelpers::StateTransitionMatcher" href="Pushdown/SpecHelpers/StateTransitionMatcher.html#method-i-via_transition_type">#via_transition_type<span class="method-parent">[::StateTransitionMatcher]</span></a></li>
+				</ul>
+			</aside>
+		</nav>
+
+		<article class="description column">
+			<div class="container">
+				<h1 class="title module-title is-1">
+					Pushdown
+				</h1>
+
+				<table class="rdoc-list note-list table box">
+					<tbody>
+					<tr>
+						<td>home</td>
+						<td>
+							<a href="http://hg.sr.ht/~ged/Pushdown">hg.sr.ht/~ged/Pushdown</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>code</td>
+						<td>
+							<a href="http://hg.sr.ht/~ged/Pushdown">hg.sr.ht/~ged/Pushdown</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>github</td>
+						<td>
+							<a href="https://github.com/ged/pushdown">github.com/ged/pushdown</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>docs</td>
+						<td>
+							<a href="http://deveiate.org/code/pushdown">deveiate.org/code/pushdown</a>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<div class="content">
+					<h2 class="title is-2" id="label-Description">Description<span class="title-links"><a href="#label-Description">¶</a> <a href="#top">↑</a></span></h2>
+
+					<p>A Pushdown Automaton toolkit for Ruby. It's based on <a href="https://book.amethyst.rs/stable/concepts/state.html#state-manager">the State Manager from the Amethyst project</a>.</p>
+
+					<p>A Pushdown Automaton is a combination of a Stack and a State Machine. Transitioning between states is accomplished via stack operations like <code>push</code> and <code>pop</code>, which allows you to encapsulate a state's behavior in a small single-responsibility class instead of making a class vary its behavior based on a variable.</p>
+
+					<h3 class="title is-3" id="label-Usage">Usage<span class="title-links"><a href="#label-Usage">¶</a> <a href="#top">↑</a></span></h3>
+
+					<p>To set up a <a href="Pushdown.html"><code>Pushdown</code></a> Automaton, you'll need to:</p>
+
+					<ol>
+						<li>Declare a variable for the state stack</li>
+						<li>Declare state classes that provide the functionality for the automaton in that state.</li>
+					</ol>
+
+					<h4 id="label-Declaring+A+Stack+Variable">Declaring A Stack Variable<span class="title-links"><a href="#label-Declaring+A+Stack+Variable">¶</a> <a href="#top">↑</a></span></h4>
+
+					<p>This example will be using the “Language acceptor” from <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/unit-1-software-engineering/state-machines/">Chapter 4</a> of the <em>MIT Open Courseware course: Introduction to Electrical Engineering and Computer Science I</em>. You don't necessarily need to have taken that course or reviewed the chapter notes, but it's an excellent introduction to the state machine concept.</p>
+
+					<p>Examples that start with <code>[1] pry(main)&gt;</code> are executed using the excellent <a href="https://pry.github.io/">Pry REPL</a>.</p>
+
+					<p>The description from the chapter notes on this example are:</p>
+
+					<blockquote>
+						<p>Here is a finite-state machine whose output is true if the input string adheres to a simple pattern, and false otherwise. In this case, the pattern has to be <code>a, b, c, a, b, c, a, b, c, …</code>.</p>
+
+						<p>It uses the states 0, 1, and 2 to stand for the situations in which it is expecting an a, b, and c, respectively; and it uses state 3 for the situation in which it has seen an input that was not the one that was expected. Once the machine goes to state 3 (sometimes called a rejecting state), it never exits that state.</p>
+					</blockquote>
+
+					<p>To get started extend your stateful class with <a href="Pushdown/Automaton.html"><code>Pushdown::Automaton</code></a> and declare a state stack:</p>
+
+					<pre>require 'pushdown'
+
+class Acme::Language
+  extend Pushdown::Automaton
+
+  pushdown_state :acceptor
+
+end # class Acme::LanguageAcceptor</pre>
+
+					<p>Now, when we create an instance of the class, it attempts to push an initial state on the stack, defaulting to a class in the same namespace called <code>Initial</code>. Since we haven't declared such a state class, creating the class fails:</p>
+
+					<pre>[1] pry(main)&gt; l = Acme::Language.new
+Pushdown::DeclarationError: failed to look up a state class for
+    :initial: uninitialized constant Acme::Language::Initial
+  from lib/pushdown/automaton.rb:218:in `rescue in pushdown_inferred_state_class'
+  Caused by NameError: uninitialized constant Acme::Language::Initial
+  from lib/pushdown/automaton.rb:216:in `pushdown_inferred_state_class'</pre>
+
+					<p>To rectify this, we need to start declaring the state classes that will provide stateful functionality to <code>Acme::Language#acceptor</code>:</p>
+
+					<h4 id="label-Declaring+A+State+Class">Declaring A State Class<span class="title-links"><a href="#label-Declaring+A+State+Class">¶</a> <a href="#top">↑</a></span></h4>
+
+					<p>The default convention is for state classes to be declared in the same namespace as the state stack. This is fine for examples and state machines with only a few simple states, but it can be unwieldy for more complex machines. We'll show you how to set up for those more complex cases a little later.</p>
+
+					<p>In the meantime, let's set up the <code>Initial</code> state inline with the <code>Acme::Language</code> class:</p>
+
+					<pre>class Acme::Language
+  # [...]
+
+    # The initial state
+    class Initial &lt; Pushdown::State
+    end
+
+end # class Acme::LanguageAcceptor</pre>
+
+					<p>Now we can create an instance of <code>Language</code> and see the <code>acceptor_stack</code> has an instance of the <code>Initial</code> state on it:</p>
+
+					<pre>[1] pry(main)&gt; l = Acme::Language.new
+=&gt; #&lt;Acme::Language:0x00007f9397995070 @acceptor_stack=[
+  #&lt;Acme::Language::Initial:0x00007f93979947d8 @data=nil&gt;]&gt;</pre>
+
+					<p>Let's say that the entry point into “accepting” the input is a method on <code>Language</code> called <code>#accept</code>. Since it's Ruby, we'll assume the input is <code>Enumerable</code> (responds to each and yields a character at a time), which will make the input source extremely flexible. Enumerable already provides a way of asking a question of each value and returning either <code>true</code> or <code>false</code> if and only if every value answers the question with <code>true</code> in the <code>#all?</code> method:</p>
+
+					<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">Acme</span><span class="ruby-operator">::</span><span class="ruby-constant">Language</span>
+
+    <span class="ruby-comment"># [...]</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">accept</span>( <span class="ruby-identifier">input</span> )
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">all?</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">char</span><span class="ruby-operator">|</span>
+            <span class="ruby-comment"># ...</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+
+					<p>Now that we have some basic functionality set up, let's start testing. First, the happy path test:</p>
+
+					<pre class="ruby"><span class="ruby-constant">RSpec</span>.<span class="ruby-identifier">describe</span>( <span class="ruby-constant">Acme</span><span class="ruby-operator">::</span><span class="ruby-constant">Language</span> ) <span class="ruby-keyword">do</span>
+
+  <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Matchers</span>.<span class="ruby-identifier">define</span>( <span class="ruby-value">:accept</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">expected</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">match</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">acceptor</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">acceptor</span>.<span class="ruby-identifier">accept</span>( <span class="ruby-identifier">expected</span> )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+
+  <span class="ruby-identifier">it</span> <span class="ruby-string">"accepts a,b,c"</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">instance</span> = <span class="ruby-identifier">described_class</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-identifier">expect</span>( <span class="ruby-identifier">instance</span> ).<span class="ruby-identifier">to</span> <span class="ruby-identifier">accept</span>( <span class="ruby-string">'abc'</span>.<span class="ruby-identifier">each_char</span> )
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+
+					<p>This fails, as expected:</p>
+
+					<pre>Failures:
+
+1) Acme::Language accepts a,b,c
+   Failure/Error: expect( instance ).to accept( 'abc'.each_char )
+     expected #&lt;Acme::Language:0x00007fd567227600
+       @acceptor_stack=[#&lt;Acme::Language::ExpectingA:0x00007fd567226b60
+       @data=nil&gt;]&gt; to accept "a", "b", and "c"
+   # ./spec/acme/language_spec.rb:21:in `block (2 levels) in &lt;top (required)&gt;'</pre>
+
+					<p>It's not yet hooked up to the states so the failure isn't as meaningful as it could be, so let's confirm that the containing logic is at least correct. We'll temporarily make the inner block of <code>#accept</code> look like this to reflect the procedural method covered in the MIT example:</p>
+
+					<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">accept</span>( <span class="ruby-identifier">input</span> )
+    <span class="ruby-identifier">n</span> = <span class="ruby-operator">-&gt;</span>( <span class="ruby-identifier">s</span>, <span class="ruby-identifier">i</span> ) {
+        <span class="ruby-keyword">case</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-string">'a'</span> <span class="ruby-keyword">then</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-string">'b'</span> <span class="ruby-keyword">then</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-string">'c'</span> <span class="ruby-keyword">then</span> <span class="ruby-value">0</span>
+        <span class="ruby-keyword">else</span>
+            <span class="ruby-value">3</span>
+        <span class="ruby-keyword">end</span>
+    }
+
+    <span class="ruby-identifier">state</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">all?</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">char</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">state</span> = <span class="ruby-identifier">n</span>[ <span class="ruby-identifier">state</span>, <span class="ruby-identifier">char</span> ]
+        <span class="ruby-identifier">state</span> <span class="ruby-operator">!=</span> <span class="ruby-value">3</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+
+					<p>Yep, that makes it pass:</p>
+
+					<pre>Finished in 0.00067 seconds (files took 0.13729 seconds to load)
+	1 example, 0 failures</pre>
+
+					<p>Obviously if your state machine is this simple, you should consider just keeping the code simple to match. Let's ignore that for now, however, for the purposes of demonstrating how you might decouple things a bit for more complex state machines, especially if transitions happen asynchronously or based on several inputs, etc.</p>
+
+					<p>To this end, let's implement it with <a href="Pushdown.html"><code>Pushdown</code></a> states. First let's cover the API for interacting with the current state since that's what's required.</p>
+
+					<h4 id="label-How+the+automaton+interacts+with+the+stack">How the automaton interacts with the stack<span class="title-links"><a href="#label-How+the+automaton+interacts+with+the+stack">¶</a> <a href="#top">↑</a></span></h4>
+
+					<p>The first thing to grok is that instead of the <em>state</em> being a variable that drives the functionality via a block of conditions, states are objects which themselves are responsible for that state's functionality. In our example, instead of using an integer variable <code>state</code>, whatever is at the top of the <code>acceptor</code> stack is the current state. To change what a given state does we just change the state class's functionality.</p>
+
+					<p>So now we just need to interact with the right states depending on what the input is.</p>
+
+					<p>To do this we need to think about <em>transitions</em>. There are three states our state machine can be in which mean that the input it's seen up to that point is “acceptable”: <code>0</code>, <code>1</code>, <code>2</code>, and <code>3</code>. Since we can name our classes in a way which reveals the intention of their functionality, let's instead call them: <code>ExpectingA</code>, <code>ExpectingB</code>, and <code>ExpectingC</code>; and a fourth state which which means that some unacceptable input has been seen called <code>Rejected</code>. Our state machine currently starts in an <code>Initial</code> state, but now we can see that it should start out <code>ExpectingA</code>. Let's change the initial state from the default in the declaration and rename the Initial class accordingly:</p>
+
+					<pre>diff --git a/lib/acme/language.rb b/lib/acme/language.rb
+--- a/lib/acme/language.rb
++++ b/lib/acme/language.rb
+@@ -10,7 +10,19 @@ class Acme::Language
+
+
+     # Declare state stack with conventional defaults for all options
+-    pushdown_state :acceptor
++    pushdown_state :acceptor, initial_state: :expecting_a
+
+
++    ### Return +true+ if the +input+ is acceptable, false otherwise.
++    def accept( input )
++         return input.all? do |char|
++              # ...
++         end
++    end
++
++
++    # Expect an 'a' as input
++    class ExpectingA &lt; Pushdown::State
++    end
++
+ end # class Acme::Language</pre>
+
+					<p>The state stack is changed via transitions that it declares for itself. Transitions in <a href="Pushdown.html"><code>Pushdown</code></a> are operations on the stack like <code>push</code>, <code>pop</code>, <code>switch</code>, etc. In <code>ExpectingA</code>, if an <code>a</code> is seen, we want to transition to <code>ExpectingB</code>, or to <code>Rejected</code> otherwise.</p>
+
+					<p>There are a few different options for the successful transition. If you wanted to keep track of how you got to where you are (e.g., for backtracking, sensible errors, etc.) you might consider <code>push</code>ing the next state, which pushes a new instance of the specified state onto the stack. Alternatively, you can just <code>switch</code> the state, which <code>pop</code>s the current state and <code>push</code>es a new instance of the specified state. For simplicity, let's use the latter. We'll name the transition <code>saw_an_a</code> to reveal the intention behind the declaration; it will transition to the <code>ExpectingB</code> state. We also can declare the <code>Rejected</code> case, using a <code>push</code> so we know what the previous state was:</p>
+
+					<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">ExpectingA</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Pushdown</span><span class="ruby-operator">::</span><span class="ruby-constant">State</span>
+    <span class="ruby-identifier">transition_switch</span> <span class="ruby-value">:saw_an_a</span>, <span class="ruby-value">:expecting_b</span>
+    <span class="ruby-identifier">transition_push</span> <span class="ruby-value">:didnt_see_an_a</span>, <span class="ruby-value">:rejected</span>
+<span class="ruby-keyword">end</span> <span class="ruby-comment"># ExpectingA</span></pre>
+
+					<h4 id="label-Interacting+with+the+current+state+on+the+stack">Interacting with the current state on the stack<span class="title-links"><a href="#label-Interacting+with+the+current+state+on+the+stack">¶</a> <a href="#top">↑</a></span></h4>
+
+					<p>There are two primary methods for interacting with the current state on the stack: an event-oriented one and a time-oriented one. The difference is up to you, but this is useful for things like waiting on network input and timing out after a while, etc.</p>
+
+					<p>The event-oriented method is <code>#on_event</code>. It has one required argument, the “event”, and a splat to allow any additional arguments you may require. The “event” can be anything meaningful to your system; for our case we'll just use the input character.</p>
+
+					<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">ExpectingA</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Pushdown</span><span class="ruby-operator">::</span><span class="ruby-constant">State</span>
+    <span class="ruby-identifier">transition_switch</span> <span class="ruby-value">:saw_an_a</span>, <span class="ruby-value">:expecting_b</span>
+    <span class="ruby-identifier">transition_push</span> <span class="ruby-value">:didnt_see_an_a</span>, <span class="ruby-value">:rejected</span>
+
+    <span class="ruby-comment">### Determine what should happen given the specified input +char+.</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">on_event</span>( <span class="ruby-identifier">char</span>, <span class="ruby-operator">*</span> )
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">==</span> <span class="ruby-string">'a'</span>
+          <span class="ruby-keyword">return</span> <span class="ruby-value">:saw_an_a</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">return</span> <span class="ruby-value">:rejected</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+
+					<h4 id="label-API+for+interacting+with+every+state+on+the+stack">API for interacting with every state on the stack<span class="title-links"><a href="#label-API+for+interacting+with+every+state+on+the+stack">¶</a> <a href="#top">↑</a></span></h4>
+
+					<h4 id="label-API+for+transitions">API for transitions<span class="title-links"><a href="#label-API+for+transitions">¶</a> <a href="#top">↑</a></span></h4>
+
+					<h2 class="title is-2" id="label-Prerequisites">Prerequisites<span class="title-links"><a href="#label-Prerequisites">¶</a> <a href="#top">↑</a></span></h2>
+
+					<ul>
+						<li>
+							<p>Ruby</p>
+						</li>
+					</ul>
+
+					<h2 class="title is-2" id="label-Installation">Installation<span class="title-links"><a href="#label-Installation">¶</a> <a href="#top">↑</a></span></h2>
+
+					<pre>$ gem install pushdown</pre>
+
+					<h2 class="title is-2" id="label-Development">Development<span class="title-links"><a href="#label-Development">¶</a> <a href="#top">↑</a></span></h2>
+
+					<p>You can check out the current source with Git via Gitlab:</p>
+
+					<pre>$ hg clone http://hg.sr.ht/~ged/Pushdown
+$ cd Pushdown</pre>
+
+					<p>After checking out the source, run:</p>
+
+					<pre>$ gem install -Ng
+$ rake setup</pre>
+
+					<p>This task will install dependencies, and do any other necessary setup for development.</p>
+
+					<h2 class="title is-2" id="label-Author-28s-29">Author(s)<span class="title-links"><a href="#label-Author-28s-29">¶</a> <a href="#top">↑</a></span></h2>
+
+					<ul>
+						<li>
+							<p>Michael Granger <a href="mailto:ged@faeriemud.org">ged@faeriemud.org</a></p>
+						</li>
+					</ul>
+
+					<p>While <a href="Pushdown.html"><code>Pushdown</code></a> does not contain any <a href="https://amethyst.rs/">Amethyst Game Engine</a> source code, it does borrow heavily from its ideas and nomenclature. Many thanks to the Amethyst team for the inspiration.</p>
+
+					<p>Thanks also to Alyssa Verkade for the initial idea.</p>
+
+					<h2 class="title is-2" id="label-License">License<span class="title-links"><a href="#label-License">¶</a> <a href="#top">↑</a></span></h2>
+
+					<p>This gem includes code from the rspec-expectations gem, used under the terms of the MIT License:</p>
+
+					<pre>Copyright (c) 2012 David Chelimsky, Myron Marston
+Copyright (c) 2006 David Chelimsky, The RSpec Development Team
+Copyright (c) 2005 Steven Baker
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
+
+					<p>The documentation and code examples use material from:</p>
+
+					<pre>Leslie Kaelbling, Jacob White, Harold Abelson, Dennis Freeman, Tomás
+Lozano-Pérez, and Isaac Chuang. 6.01SC Introduction to Electrical
+Engineering and Computer Science I. Spring 2011. Massachusetts Institute of
+Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative
+Commons BY-NC-SA.</pre>
+
+					<p><a href="Pushdown.html"><code>Pushdown</code></a> itself is:</p>
+
+					<p>Copyright © 2019-2021, Michael Granger All rights reserved.</p>
+
+					<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+					<ul>
+						<li>
+							<p>Redistributions of source code must retain the above copyright notice,  this list of conditions and the following disclaimer.</p>
+						</li>
+						<li>
+							<p>Redistributions in binary form must reproduce the above copyright notice,  this list of conditions and the following disclaimer in the documentation  and/or other materials provided with the distribution.</p>
+						</li>
+						<li>
+							<p>Neither the name of the author/s, nor the names of the project's  contributors may be used to endorse or promote products derived from this  software without specific prior written permission.</p>
+						</li>
+					</ul>
+
+					<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+				</div>
+			</div>
+		</article>
+
+	</main>
+
+	<footer class="footer">
+		<span id="rdoc-version">Generated by RDoc 6.4</span> using the
+		<a id="generator-version"
+			href="http://hg.sr.ht/~ged/Sixfish">Sixfish 1.0</a> generator.
+	</footer>
+
+</body>
+</html>

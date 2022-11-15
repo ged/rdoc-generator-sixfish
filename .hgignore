@@ -1,0 +1,9 @@
+data/rdoc-generator-sixfish/css/
+data/rdoc-generator-sixfish/js/
+node_modules/
+docs/
+\.DS_Store
+\.lock$
+\.log$
+\.parcel-cache/
+\.sass-cache/

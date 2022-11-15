@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Sixfish RDoc</title>
+
+	<meta name="description" content="API documentation for Sixfish RDoc">
+
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="../docs/images/favicon.png">
+
+	<link rel="stylesheet" href="../data/rdoc-generator-sixfish/css/sixfish.css">
+</head>
+<body>
+	<main class="columns section">
+		<nav class="index column is-one-quarter">
+			<div class="field">
+				<p class="control has-icons-left">
+					<input class="input is-rounded" type="text" placeholder="Search">
+				</p>
+			</div>
+
+			<aside class="menu">
+				<p class="menu-label">Files</p>
+
+				<ul id="file-index" class="menu-list">
+					<li class="file"><a href="../docs/History_md.html">History</a></li>
+					<li class="file"><a href="../docs/README_md.html">README</a></li>
+				</ul>
+			</aside>
+
+			<aside class="menu">
+				<p class="menu-label">Classes/Modules</p>
+
+				<ul id="class-index" class="menu-list">
+					<li class="class"><a href="../docs/RDoc/Generator/Sixfish.html">RDoc::Generator::Sixfish</a></li>
+					<li class="class"><a href="../docs/RDoc/Options.html">RDoc::Options</a></li>
+					<li class="class"><a href="../docs/Sixfish.html">Sixfish</a></li>
+				</ul>
+			</aside>
+
+			<aside class="menu">
+				<p class="menu-label">Methods</p>
+
+				<ul id="method-index" class="menu-list">
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-c-new">::new <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-c-setup_options">::setup_options <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="Sixfish" href="../docs/Sixfish.html#method-c-version_string">::version_string <span class="method-parent">[Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-copy_static_assets">#copy_static_assets <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-debug_msg">#debug_msg <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-extract_synopsis">#extract_synopsis <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-find_static_assets">#find_static_assets <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-gen_sub_directories">#gen_sub_directories <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-generate">#generate <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-generate_class_files">#generate_class_files <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-generate_file_files">#generate_file_files <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-generate_index_page">#generate_index_page <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-generate_search_index">#generate_search_index <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-get_indexable_objects">#get_indexable_objects <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-get_sorted_module_list">#get_sorted_module_list <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-load_layout_template">#load_layout_template <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-load_template">#load_template <span class="method-parent">[::Sixfish]</span></a></li>
+					<li class="method"><a title="RDoc::Generator::Sixfish" href="../docs/RDoc/Generator/Sixfish.html#method-i-populate_data_objects">#populate_data_objects <span class="method-parent">[::Sixfish]</span></a></li>
+				</ul>
+			</aside>
+		</nav>
+
+		<article class="description column">
+			<div class="container">
+				<header>
+					<h2 class="namespace">RDoc::Generator::</h2>
+
+					<h1 class="class title is-1" title="In files: " data-tooltip="lib/rdoc/generator/sixfish.rb"><span class="name">Sixfish</span><span class="tag is-info">class</span></h1>
+				</header>
+
+				<section class="description content">
+					<table class="class-metadata table box">
+						<tbody>
+							<tr>
+								<td>Superclass</td>
+								<td class="superclass">Object</td>
+							</tr>
+							<tr>
+								<td>Included Modules</td>
+								<td class="include">FileUtils</td>
+							</tr>
+							<tr>
+								<td>Extended With</td>
+								<td class="extend">Loggability</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>The <a href="../docs/Sixfish.html"><code>Sixfish</code></a> generator class.</p>
+				</section>
+
+				<div class="api content">
+					<!-- Constants -->
+					<section class="constants-list">
+						<header>
+							<h3 class="title is-3">Constants</h3>
+						</header>
+
+						<dl class="constants">
+							<dt id="DATADIR">DATADIR</dt>
+
+							<dd class="description">
+								<p>The data directory in the project if that exists, otherwise the gem datadir</p>
+							</dd>
+						</dl>
+					</section><!-- Attributes -->
+					<section class="attributes-list">
+						<header>
+							<h3>Attributes</h3>
+						</header>
+
+						<dl class="attributes">
+							<dt id="attribute-i-base_dir">base_dir <span class="attribute-access-type r" title="reader">R</span></dt>
+
+							<dd class="description">
+								<p>The base directory (current working directory) as a Pathname</p>
+							</dd>
+
+							<dt id="attribute-i-options">options <span class="attribute-access-type r" title="reader">R</span></dt>
+
+							<dd class="description">
+								<p>The command-line options given to the rdoc command</p>
+							</dd>
+
+							<dt id="attribute-i-output_dir">output_dir <span class="attribute-access-type r" title="reader">R</span></dt>
+
+							<dd class="description">
+								<p>The output directory as a Pathname</p>
+							</dd>
+
+							<dt id="attribute-i-store">store <span class="attribute-access-type r" title="reader">R</span></dt>
+
+							<dd class="description">
+								<p>The RDoc::Store that contains the parsed CodeObjects</p>
+							</dd>
+
+							<dt id="attribute-i-template_dir">template_dir <span class="attribute-access-type r" title="reader">R</span></dt>
+
+							<dd class="description">
+								<p>The directory containing templates as a Pathname</p>
+							</dd>
+						</dl>
+					</section><!-- Methods -->
+					<section class="public-methods class-methods methods">
+						<header>
+							<h3>Public Class Methods</h3>
+						</header><a name="method-c-new" id="method-c-new"></a>
+
+						<div id="method-c-new-doc" class="method">
+							<header><span class="method-name">new</span><span class="method-args">( store, options )</span></header>
+
+							<div class="method-description">
+								<p>Set up some instance variables</p>
+
+								<div class="method-source-code" id="new-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 61</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>( <span class="ruby-identifier">store</span>, <span class="ruby-identifier">options</span> )
+	<span class="ruby-ivar">@store</span>      = <span class="ruby-identifier">store</span>
+	<span class="ruby-ivar">@options</span>    = <span class="ruby-identifier">options</span>
+	<span class="ruby-identifier">$DEBUG_RDOC</span> = <span class="ruby-identifier">$VERBOSE</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">$DEBUG</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"Setting up generator for %p with options: %p"</span> <span class="ruby-operator">%</span> [ <span class="ruby-ivar">@store</span>, <span class="ruby-ivar">@options</span> ]
+
+	<span class="ruby-identifier">extend</span>( <span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-constant">Verbose</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">$DEBUG_RDOC</span>
+	<span class="ruby-identifier">extend</span>( <span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-constant">DryRun</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dry_run</span>
+
+	<span class="ruby-ivar">@base_dir</span>       = <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">pwd</span>.<span class="ruby-identifier">expand_path</span>
+	<span class="ruby-ivar">@template_dir</span>   = <span class="ruby-constant">DATADIR</span>
+	<span class="ruby-ivar">@output_dir</span>     = <span class="ruby-constant">Pathname</span>( <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">op_dir</span> ).<span class="ruby-identifier">expand_path</span>( <span class="ruby-ivar">@base_dir</span> )
+
+	<span class="ruby-ivar">@template_cache</span> = {}
+	<span class="ruby-ivar">@files</span>          = <span class="ruby-keyword">nil</span>
+	<span class="ruby-ivar">@classes</span>        = <span class="ruby-keyword">nil</span>
+	<span class="ruby-ivar">@search_index</span>   = {}
+
+	<span class="ruby-constant">Inversion</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span>.<span class="ruby-identifier">configure</span>( <span class="ruby-value">:template_paths</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">template_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">'templates'</span>] )
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-c-setup_options" id="method-c-setup_options"></a>
+
+						<div id="method-c-setup_options-doc" class="method">
+							<header><span class="method-name">setup_options</span><span class="method-args">( rdoc_options )</span></header>
+
+							<div class="method-description">
+								<p>Add generator-specific options to the option-parser</p>
+
+								<div class="method-source-code" id="setup_options-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 43</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier ruby-title">setup_options</span>( <span class="ruby-identifier">rdoc_options</span> )
+	<span class="ruby-identifier">op</span> = <span class="ruby-identifier">rdoc_options</span>.<span class="ruby-identifier">option_parser</span>
+
+	<span class="ruby-identifier">op</span>.<span class="ruby-identifier">accept</span>( <span class="ruby-constant">URI</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">string</span><span class="ruby-operator">|</span>
+	        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-identifier">string</span> ) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+	        <span class="ruby-identifier">raise</span> <span class="ruby-constant">OptionParser</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidArgument</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uri</span>
+	        <span class="ruby-identifier">uri</span>
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-identifier">op</span>.<span class="ruby-identifier">on</span>( <span class="ruby-string">'--additional-stylesheet=URL'</span>, <span class="ruby-constant">URI</span>,
+	       <span class="ruby-string">"Add an additional (preferred) stylesheet"</span>,
+	           <span class="ruby-string">"link to each generated page. This allows"</span>,
+	           <span class="ruby-string">"the output style to be overridden."</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+	        <span class="ruby-identifier">rdoc_options</span>.<span class="ruby-identifier">additional_stylesheet</span> = <span class="ruby-identifier">url</span>
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="public-methods instance-methods methods">
+						<header>
+							<h3>Public Instance Methods</h3>
+						</header><a name="method-i-copy_static_assets" id="method-i-copy_static_assets"></a>
+
+						<div id="method-i-copy_static_assets-doc" class="method">
+							<header><span class="method-name">copy_static_assets</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Copies static files from the static_path into the output directory</p>
+
+								<div class="method-source-code" id="copy_static_assets-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 266</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">copy_static_assets</span>
+	<span class="ruby-identifier">asset_paths</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_static_assets</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"Copying assets from paths: %s"</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">asset_paths</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">', '</span>) ]
+
+	<span class="ruby-identifier">asset_paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+
+	        <span class="ruby-comment"># For plain files, just install them</span>
+	        <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">file?</span>
+	                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  plain file; installing as-is"</span>
+	                <span class="ruby-identifier">install</span>( <span class="ruby-identifier">path</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span>, <span class="ruby-value">:mode</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0644</span> )
+
+	        <span class="ruby-comment"># Glob all the files out of subdirectories and install them</span>
+	        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">directory?</span>
+	                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  directory %p; copying contents"</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">path</span> ]
+
+	                <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">glob</span>( <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">'{css,fa,fonts,img,js}/**/*'</span>.<span class="ruby-identifier">to_s</span> ).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">asset</span><span class="ruby-operator">|</span>
+	                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">asset</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">asset</span>.<span class="ruby-identifier">basename</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">start_with?</span>( <span class="ruby-string">'.'</span> )
+
+	                        <span class="ruby-identifier">dst</span> = <span class="ruby-identifier">asset</span>.<span class="ruby-identifier">relative_path_from</span>( <span class="ruby-identifier">path</span> )
+	                        <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">mkpath</span>
+
+	                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"    %p -&gt; %p"</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">asset</span>, <span class="ruby-identifier">dst</span> ]
+	                        <span class="ruby-identifier">install</span> <span class="ruby-identifier">asset</span>, <span class="ruby-identifier">dst</span>, <span class="ruby-value">:mode</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0644</span>
+	                <span class="ruby-keyword">end</span>
+	        <span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-debug_msg" id="method-i-debug_msg"></a>
+
+						<div id="method-i-debug_msg-doc" class="method">
+							<header><span class="method-name">debug_msg</span><span class="method-args">( *msg )</span></header>
+
+							<div class="method-description">
+								<p>Output progress information if debugging is enabled</p>
+
+								<div class="method-source-code" id="debug_msg-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 105</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">debug_msg</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">msg</span> )
+	<span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$DEBUG_RDOC</span>
+	<span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">msg</span> )
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-gen_sub_directories" id="method-i-gen_sub_directories"></a>
+
+						<div id="method-i-gen_sub_directories-doc" class="method">
+							<header><span class="method-name">gen_sub_directories</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Create the directories the generated docs will live in if they don’t already exist.</p>
+
+								<div class="method-source-code" id="gen_sub_directories-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 120</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">gen_sub_directories</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span>.<span class="ruby-identifier">mkpath</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-generate" id="method-i-generate"></a>
+
+						<div id="method-i-generate-doc" class="method">
+							<header><span class="method-name">generate</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Build the initial indices and output objects based on the files in the generator’s store.</p>
+
+								<div class="method-source-code" id="generate-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 126</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">populate_data_objects</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">generate_index_page</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">generate_class_files</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">generate_file_files</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">generate_search_index</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">copy_static_assets</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-generate_class_files" id="method-i-generate_class_files"></a>
+
+						<div id="method-i-generate_class_files-doc" class="method">
+							<header><span class="method-name">generate_class_files</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Generate a documentation file for each class and module</p>
+
+								<div class="method-source-code" id="generate_class_files-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 179</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_class_files</span>
+	<span class="ruby-identifier">layout</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_layout_template</span>
+	<span class="ruby-identifier">template</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_template</span>( <span class="ruby-string">'class.tmpl'</span> )
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">"Generating class documentation in #{self.output_dir}"</span>
+
+	<span class="ruby-ivar">@classes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+	        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  working on %s (%s)"</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">path</span>]
+
+	        <span class="ruby-identifier">out_file</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">path</span>
+	        <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">mkpath</span>
+
+	        <span class="ruby-identifier">template</span>.<span class="ruby-identifier">klass</span> = <span class="ruby-identifier">klass</span>
+
+	        <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">contents</span> = <span class="ruby-identifier">template</span>
+	        <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">rel_prefix</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span>.<span class="ruby-identifier">relative_path_from</span>( <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span> )
+	        <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">pageclass</span> = <span class="ruby-string">'class-page'</span>
+
+	        <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">open</span>( <span class="ruby-string">'w'</span>, <span class="ruby-value">0644</span> ) {<span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span>(<span class="ruby-identifier">layout</span>.<span class="ruby-identifier">render</span>) }
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-generate_file_files" id="method-i-generate_file_files"></a>
+
+						<div id="method-i-generate_file_files-doc" class="method">
+							<header><span class="method-name">generate_file_files</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Generate a documentation file for each file</p>
+
+								<div class="method-source-code" id="generate_file_files-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 203</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_file_files</span>
+	<span class="ruby-identifier">layout</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_layout_template</span>
+	<span class="ruby-identifier">template</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_template</span>( <span class="ruby-string">'file.tmpl'</span> )
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">"Generating file documentation in #{self.output_dir}"</span>
+
+	<span class="ruby-ivar">@files</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">text?</span> }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+	        <span class="ruby-identifier">out_file</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">path</span>
+	        <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">mkpath</span>
+
+	        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  working on %s (%s)"</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">file</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">out_file</span>]
+
+	        <span class="ruby-identifier">template</span>.<span class="ruby-identifier">file</span> = <span class="ruby-identifier">file</span>
+
+	        <span class="ruby-comment"># If the page itself has an H1, use it for the header, otherwise make one</span>
+	        <span class="ruby-comment"># out of the name of the file</span>
+	        <span class="ruby-keyword">if</span> <span class="ruby-identifier">md</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">description</span>.<span class="ruby-identifier">match</span>( <span class="ruby-regexp">%r{&lt;h1.*?&gt;.*?&lt;/h1&gt;}i</span> )
+	                <span class="ruby-identifier">template</span>.<span class="ruby-identifier">header</span> = <span class="ruby-identifier">md</span>[ <span class="ruby-value">0</span> ]
+	                <span class="ruby-identifier">template</span>.<span class="ruby-identifier">description</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">description</span>[ <span class="ruby-identifier">md</span>.<span class="ruby-identifier">offset</span>(<span class="ruby-value">0</span>)[<span class="ruby-value">1</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">..</span> <span class="ruby-value">-1</span> ]
+	        <span class="ruby-keyword">else</span>
+	                <span class="ruby-identifier">template</span>.<span class="ruby-identifier">header</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>( <span class="ruby-identifier">file</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">file</span>.<span class="ruby-identifier">full_name</span>) )
+	                <span class="ruby-identifier">template</span>.<span class="ruby-identifier">description</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">description</span>
+	        <span class="ruby-keyword">end</span>
+
+	        <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">contents</span> = <span class="ruby-identifier">template</span>
+	        <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">rel_prefix</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span>.<span class="ruby-identifier">relative_path_from</span>(<span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span>)
+	        <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">pageclass</span> = <span class="ruby-string">'file-page'</span>
+
+	        <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">open</span>( <span class="ruby-string">'w'</span>, <span class="ruby-value">0644</span> ) {<span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span>(<span class="ruby-identifier">layout</span>.<span class="ruby-identifier">render</span>) }
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-generate_index_page" id="method-i-generate_index_page"></a>
+
+						<div id="method-i-generate_index_page-doc" class="method">
+							<header><span class="method-name">generate_index_page</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Generate an index page which lists all the classes which are documented.</p>
+
+								<div class="method-source-code" id="generate_index_page-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 150</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_index_page</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"Generating index page"</span>
+	<span class="ruby-identifier">layout</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_layout_template</span>
+	<span class="ruby-identifier">template</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_template</span>( <span class="ruby-string">'index.tmpl'</span> )
+	<span class="ruby-identifier">out_file</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">'index.html'</span>
+	<span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">mkpath</span>
+
+	<span class="ruby-identifier">mainpage</span> = <span class="ruby-keyword">nil</span>
+	<span class="ruby-keyword">if</span> <span class="ruby-identifier">mpname</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">main_page</span>
+	        <span class="ruby-identifier">mainpage</span> = <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">full_name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">mpname</span> }
+	<span class="ruby-keyword">else</span>
+	        <span class="ruby-identifier">mainpage</span> = <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">full_name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\breadme\b/i</span> }
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  using main_page (%s)"</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">mainpage</span> ]
+
+	<span class="ruby-keyword">if</span> <span class="ruby-identifier">mainpage</span>
+	        <span class="ruby-identifier">template</span>.<span class="ruby-identifier">mainpage</span> = <span class="ruby-identifier">mainpage</span>
+	        <span class="ruby-identifier">template</span>.<span class="ruby-identifier">synopsis</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">extract_synopsis</span>( <span class="ruby-identifier">mainpage</span> )
+	<span class="ruby-keyword">end</span>
+
+	<span class="ruby-identifier">layout</span>.<span class="ruby-identifier">rel_prefix</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span>.<span class="ruby-identifier">relative_path_from</span>( <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span> )
+	<span class="ruby-identifier">layout</span>.<span class="ruby-identifier">contents</span> = <span class="ruby-identifier">template</span>
+	<span class="ruby-identifier">layout</span>.<span class="ruby-identifier">pageclass</span> = <span class="ruby-string">'index-page'</span>
+
+	<span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">open</span>( <span class="ruby-string">'w'</span>, <span class="ruby-value">0644</span> ) {<span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span>(<span class="ruby-identifier">layout</span>.<span class="ruby-identifier">render</span>) }
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-generate_search_index" id="method-i-generate_search_index"></a>
+
+						<div id="method-i-generate_search_index-doc" class="method">
+							<header><span class="method-name">generate_search_index</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Generate a JSON search index for the quicksearch blank.</p>
+
+								<div class="method-source-code" id="generate_search_index-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 237</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_search_index</span>
+	<span class="ruby-identifier">out_file</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">'js/searchindex.json'</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"Generating search index (%s)."</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">out_file</span> ]
+	<span class="ruby-identifier">index</span> = []
+
+	<span class="ruby-identifier">objs</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_indexable_objects</span>
+	<span class="ruby-identifier">objs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">codeobj</span><span class="ruby-operator">|</span>
+	        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">"  #{codeobj.name}..."</span>
+	        <span class="ruby-identifier">record</span> = <span class="ruby-identifier">codeobj</span>.<span class="ruby-identifier">search_record</span>
+	        <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;&lt;</span> {
+	                <span class="ruby-value">name:</span>    <span class="ruby-identifier">record</span>[<span class="ruby-value">2</span>],
+	                <span class="ruby-value">link:</span>    <span class="ruby-identifier">record</span>[<span class="ruby-value">4</span>],
+	                <span class="ruby-value">snippet:</span> <span class="ruby-identifier">record</span>[<span class="ruby-value">6</span>],
+	                <span class="ruby-value">type:</span>    <span class="ruby-identifier">codeobj</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">sub</span>( <span class="ruby-regexp">/.*::/</span>, <span class="ruby-string">''</span> )
+	        }
+	<span class="ruby-keyword">end</span>
+
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  dumping JSON..."</span>
+	<span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">mkpath</span>
+	<span class="ruby-identifier">ofh</span> = <span class="ruby-identifier">out_file</span>.<span class="ruby-identifier">open</span>( <span class="ruby-string">'w:utf-8'</span>, <span class="ruby-value">0644</span> )
+
+	<span class="ruby-identifier">json</span> = <span class="ruby-constant">Yajl</span>.<span class="ruby-identifier">dump</span>( <span class="ruby-identifier">index</span>, <span class="ruby-value">pretty:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">indent:</span> <span class="ruby-string">"\t"</span> )
+
+	<span class="ruby-identifier">ofh</span>.<span class="ruby-identifier">puts</span>( <span class="ruby-string">'var SearchIndex = '</span>, <span class="ruby-identifier">json</span>, <span class="ruby-string">';'</span> )
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-populate_data_objects" id="method-i-populate_data_objects"></a>
+
+						<div id="method-i-populate_data_objects-doc" class="method">
+							<header><span class="method-name">populate_data_objects</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Populate the data objects necessary to generate documentation from the generator’s store.</p>
+
+								<div class="method-source-code" id="populate_data_objects-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 141</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">populate_data_objects</span>
+	<span class="ruby-ivar">@files</span>   = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">store</span>.<span class="ruby-identifier">all_files</span>.<span class="ruby-identifier">sort</span>
+	<span class="ruby-ivar">@classes</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">store</span>.<span class="ruby-identifier">all_classes_and_modules</span>.<span class="ruby-identifier">sort</span>
+	<span class="ruby-ivar">@methods</span> = <span class="ruby-ivar">@classes</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">method_list</span> }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">sort</span>
+	<span class="ruby-ivar">@modsort</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_sorted_module_list</span>( <span class="ruby-ivar">@classes</span> )
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="protected-methods instance-methods methods">
+						<header>
+							<h3>Protected Instance Methods</h3>
+						</header><a name="method-i-extract_synopsis" id="method-i-extract_synopsis"></a>
+
+						<div id="method-i-extract_synopsis-doc" class="method">
+							<header><span class="method-name">extract_synopsis</span><span class="method-args">( mainpage )</span></header>
+
+							<div class="method-description">
+								<p>Extract a synopsis for the project from the specified <code>mainpage</code> and return it as a String.</p>
+
+								<div class="method-source-code" id="extract_synopsis-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 380</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">extract_synopsis</span>( <span class="ruby-identifier">mainpage</span> )
+	<span class="ruby-identifier">desc</span>    = <span class="ruby-identifier">mainpage</span>.<span class="ruby-identifier">description</span>
+	<span class="ruby-identifier">heading</span> = <span class="ruby-identifier">desc</span>[ <span class="ruby-regexp">%r{(&lt;h1.*?/h1&gt;)}im</span> ] <span class="ruby-operator">||</span> <span class="ruby-string">''</span>
+	<span class="ruby-identifier">paras</span>   = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">scan</span>( <span class="ruby-regexp">%r{&lt;p\b.*?/p&gt;}im</span> )
+
+	<span class="ruby-identifier">first_para</span> = <span class="ruby-identifier">paras</span>.<span class="ruby-identifier">map</span>( <span class="ruby-operator">&</span><span class="ruby-value">:strip</span> ).<span class="ruby-identifier">find</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">para</span><span class="ruby-operator">|</span>
+	        <span class="ruby-comment"># Discard paragraphs consisting only of a link</span>
+	        <span class="ruby-operator">!</span>( <span class="ruby-identifier">para</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">'&lt;p&gt;&lt;a'</span>) <span class="ruby-operator">&amp;&</span> <span class="ruby-identifier">para</span>.<span class="ruby-identifier">end_with?</span>(<span class="ruby-string">'/a&gt;&lt;/p&gt;'</span>) )
+	<span class="ruby-keyword">end</span>
+
+	<span class="ruby-keyword">return</span> <span class="ruby-identifier">heading</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">first_para</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-find_static_assets" id="method-i-find_static_assets"></a>
+
+						<div id="method-i-find_static_assets-doc" class="method">
+							<header><span class="method-name">find_static_assets</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Return an Array of Pathname objects for each file/directory in the list of static assets that should be copied into the output directory.</p>
+
+								<div class="method-source-code" id="find_static_assets-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 302</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_static_assets</span>
+	<span class="ruby-identifier">paths</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">static_path</span> <span class="ruby-operator">||</span> []
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"Finding asset paths. Static paths: %p"</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">paths</span> ]
+
+	<span class="ruby-comment"># Add each subdirectory of the template dir</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  adding directories under %s"</span> <span class="ruby-operator">%</span> [ <span class="ruby-keyword">self</span>.<span class="ruby-identifier">template_dir</span> ]
+	<span class="ruby-identifier">paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">template_dir</span>
+	<span class="ruby-keyword">self</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">"  paths are now: %p"</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">paths</span> ]
+
+	<span class="ruby-keyword">return</span> <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-get_indexable_objects" id="method-i-get_indexable_objects"></a>
+
+						<div id="method-i-get_indexable_objects-doc" class="method">
+							<header><span class="method-name">get_indexable_objects</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Return a list of CodeObjects that belong in the index.</p>
+
+								<div class="method-source-code" id="get_indexable_objects-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 367</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_indexable_objects</span>
+	<span class="ruby-identifier">objs</span> = []
+
+	<span class="ruby-identifier">objs</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@classes</span>.<span class="ruby-identifier">select</span>( <span class="ruby-operator">&</span><span class="ruby-value">:document_self_or_methods</span> ).<span class="ruby-identifier">uniq</span>( <span class="ruby-operator">&</span><span class="ruby-value">:path</span> )
+	<span class="ruby-identifier">objs</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@classes</span>.<span class="ruby-identifier">map</span>( <span class="ruby-operator">&</span><span class="ruby-value">:method_list</span> ).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>( <span class="ruby-operator">&</span><span class="ruby-value">:path</span> )
+	<span class="ruby-identifier">objs</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">select</span>( <span class="ruby-operator">&</span><span class="ruby-value">:text?</span> )
+
+	<span class="ruby-keyword">return</span> <span class="ruby-identifier">objs</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-get_sorted_module_list" id="method-i-get_sorted_module_list"></a>
+
+						<div id="method-i-get_sorted_module_list-doc" class="method">
+							<header><span class="method-name">get_sorted_module_list</span><span class="method-args">(classes)</span></header>
+
+							<div class="method-description">
+								<p>Return a list of the documented modules sorted by salience first, then by name.</p>
+
+								<div class="method-source-code" id="get_sorted_module_list-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 317</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_sorted_module_list</span>(<span class="ruby-identifier">classes</span>)
+	<span class="ruby-identifier">nscounts</span> = <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">counthash</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+	        <span class="ruby-identifier">top_level</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/::.*/</span>, <span class="ruby-string">''</span> )
+	        <span class="ruby-identifier">counthash</span>[<span class="ruby-identifier">top_level</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+	        <span class="ruby-identifier">counthash</span>[<span class="ruby-identifier">top_level</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+	        <span class="ruby-identifier">counthash</span>
+	<span class="ruby-keyword">end</span>
+
+	<span class="ruby-comment"># Sort based on how often the top level namespace occurs, and then on the</span>
+	<span class="ruby-comment"># name of the module -- this works for projects that put their stuff into</span>
+	<span class="ruby-comment"># a namespace, of course, but doesn't hurt if they don't.</span>
+	<span class="ruby-identifier">classes</span>.<span class="ruby-identifier">sort_by</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+	        <span class="ruby-identifier">top_level</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/::.*/</span>, <span class="ruby-string">''</span> )
+	        [<span class="ruby-identifier">nscounts</span>[<span class="ruby-identifier">top_level</span>] <span class="ruby-operator">*</span> <span class="ruby-value">-1</span>, <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>]
+	<span class="ruby-keyword">end</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+	        <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">display?</span>
+	<span class="ruby-keyword">end</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-load_layout_template" id="method-i-load_layout_template"></a>
+
+						<div id="method-i-load_layout_template-doc" class="method">
+							<header><span class="method-name">load_layout_template</span><span class="method-args">()</span></header>
+
+							<div class="method-description">
+								<p>Load the layout template and return it after setting any values it needs.</p>
+
+								<div class="method-source-code" id="load_layout_template-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 350</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_layout_template</span>
+	<span class="ruby-identifier">template</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_template</span>( <span class="ruby-string">'layout.tmpl'</span> )
+
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">files</span>   = <span class="ruby-ivar">@files</span>
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">classes</span> = <span class="ruby-ivar">@classes</span>
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">methods</span> = <span class="ruby-ivar">@methods</span>
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">modsort</span> = <span class="ruby-ivar">@modsort</span>
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">rdoc_options</span> = <span class="ruby-ivar">@options</span>
+
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">rdoc_version</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
+	<span class="ruby-identifier">template</span>.<span class="ruby-identifier">sixfish_version</span> = <span class="ruby-constant">Sixfish</span>.<span class="ruby-identifier">version_string</span>
+
+	<span class="ruby-keyword">return</span> <span class="ruby-identifier">template</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div><a name="method-i-load_template" id="method-i-load_template"></a>
+
+						<div id="method-i-load_template-doc" class="method">
+							<header><span class="method-name">load_template</span><span class="method-args">( name )</span></header>
+
+							<div class="method-description">
+								<p>Fetch the template with the specified <code>name</code> from the cache or load it and cache it.</p>
+
+								<div class="method-source-code" id="load_template-source">
+									<pre class="prettyprint linenums"><code class="language-ruby"><span class="ruby-comment"># File lib/rdoc/generator/sixfish.rb, line 340</span>
+	<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_template</span>( <span class="ruby-identifier">name</span> )
+	<span class="ruby-keyword">unless</span> <span class="ruby-ivar">@template_cache</span>.<span class="ruby-identifier">key?</span>( <span class="ruby-identifier">name</span> )
+	        <span class="ruby-ivar">@template_cache</span>[ <span class="ruby-identifier">name</span> ] = <span class="ruby-constant">Inversion</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">name</span>, <span class="ruby-value">encoding:</span><span class="ruby-string">'utf-8'</span> )
+	<span class="ruby-keyword">end</span>
+
+	<span class="ruby-keyword">return</span> <span class="ruby-ivar">@template_cache</span>[ <span class="ruby-identifier">name</span> ].<span class="ruby-identifier">dup</span>
+	<span class="ruby-keyword">end</span></code></pre>
+								</div>
+							</div>
+						</div>
+						</section>
+					</section>
+				</div>
+		</article>
+	</main>
+
+	<footer class="footer"><span id="rdoc-version">Generated by RDoc 6.4.0</span> using the <a id="generator-version" href="https://hg.sr.ht/~ged/Sixfish">Sixfish RDoc 0.4.0</a> generator.</footer>
+</body>
+</html>

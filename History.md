@@ -1,39 +1,9 @@
-==  v0.4.0 [2018-03-13] Michael Granger <ged@FaerieMUD.org>
+# Release History for rdoc-generator-sixfish
 
-Enhancements:
-
-- Bump RDoc dependency to 6.0.
-- Use TTF fonts instead of converting them to WOFF.
+---
 
 
-== v0.3.0 [2017-01-22] Michael Granger <ged@FaerieMUD.org>
-
-- Bump dependency on RDoc to 5.0.
-
-
-== v0.2.1 [2017-01-17] Michael Granger <ged@FaerieMUD.org>
-
-- Oops, didn't mean to depend on RDoc 5 quite yet.
-
-
-== v0.2.0 [2017-01-17] Michael Granger <ged@FaerieMUD.org>
-
-- Bump Inversion and Loggabilty dep
-- Update for Ruby >2.2, newer RSpec.
-
-
-== v0.1.0 [2013-02-27] Michael Granger <ged@FaerieMUD.org>
-
-- Add some CSS and module-index visual tweaks
-- Make the synopsis-extraction more intelligent
-- Add support for module extension
-- Add Ruby 2.0 support
-- Add an --additional-stylesheet option
-- Make the anchor and top links in titles less obnoxious
-- Update for RDoc 4
-
-
-== v0.0.1 [2012-09-12] Michael Granger <ged@FaerieMUD.org>
+## v0.1.0 [2022-11-15] Michael Granger <ged@FaerieMUD.org>
 
 Initial release.
 

@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
-# stub: rdoc-generator-sixfish 0.5.0.pre.20221115140414 ruby lib
+# stub: rdoc-generator-sixfish 0.2.0.pre.20221115154358 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "rdoc-generator-sixfish".freeze
-  s.version = "0.5.0.pre.20221115140414"
+  s.version = "0.2.0.pre.20221115154358"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "bug_tracker_uri" => "https://todo.sr.ht/~ged/Sixfish", "documentation_uri" => "https://deveiate.org/code/sixfish", "homepage_uri" => "https://hg.sr.ht/~ged/Sixfish", "source_uri" => "https://hg.sr.ht/~ged/Sixfish" } if s.respond_to? :metadata=

@@ -21,6 +21,7 @@ task :gem => :assets
 tasks = Rake::DevEiate.setup( 'rdoc-generator-sixfish' ) do |project|
 	project.version_from = 'lib/sixfish.rb'
 	project.publish_to = 'deveiate:/usr/local/www/public/code'
+	project.rdoc_generator = :sixfish
 end
 
 

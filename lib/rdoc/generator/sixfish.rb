@@ -3,7 +3,6 @@
 gem 'rdoc'
 
 require 'uri'
-require 'yajl'
 require 'inversion'
 require 'loggability'
 require 'fileutils'
@@ -32,7 +31,7 @@ class RDoc::Generator::Sixfish
 			File.exist?( Gem.loaded_specs['rdoc-generator-sixfish'].datadir )
 			Pathname( Gem.loaded_specs['rdoc-generator-sixfish'].datadir )
 		else
-			Pathname( __FILE__ ).dirname.parent + 'data/rdoc-generator-sixfish'
+			Pathname( __FILE__ ).dirname.parent.parent.parent + 'data/rdoc-generator-sixfish'
 		end
 
 	# Register with RDoc as an alternative generator
@@ -75,7 +74,6 @@ class RDoc::Generator::Sixfish
 		@template_cache = {}
 		@files          = nil
 		@classes        = nil
-		@search_index   = {}
 
 		Inversion::Template.configure( :template_paths => [self.template_dir + 'templates'] )
 	end
@@ -129,8 +127,6 @@ class RDoc::Generator::Sixfish
 		self.generate_index_page
 		self.generate_class_files
 		self.generate_file_files
-
-		self.generate_search_index
 
 		self.copy_static_assets
 	end
@@ -217,35 +213,6 @@ class RDoc::Generator::Sixfish
 
 			out_file.open( 'w', 0644 ) {|io| io.print(layout.render) }
 		end
-	end
-
-
-	### Generate a JSON search index for the quicksearch blank.
-	def generate_search_index
-		out_file = self.output_dir + 'js/searchindex.json'
-
-		self.log.debug "Generating search index (%s)." % [ out_file ]
-		index = []
-
-	    objs = self.get_indexable_objects
-		objs.each do |codeobj|
-			self.log.debug "  #{codeobj.name}..."
-			record = codeobj.search_record
-			index << {
-				name:    record[2],
-				link:    record[4],
-				snippet: record[6],
-				type:    codeobj.class.name.downcase.sub( /.*::/, '' )
-			}
-		end
-
-		self.log.debug "  dumping JSON..."
-		out_file.dirname.mkpath
-		ofh = out_file.open( 'w:utf-8', 0644 )
-
-		json = Yajl.dump( index, pretty: true, indent: "\t" )
-
-		ofh.puts( 'var SearchIndex = ', json, ';' )
 	end
 
 

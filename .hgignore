@@ -8,3 +8,4 @@ pkg/
 \.log$
 \.parcel-cache/
 \.sass-cache/
+\.gem$

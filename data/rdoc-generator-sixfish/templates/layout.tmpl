@@ -68,7 +68,7 @@
 				<?for method in methods.uniq {|m| m.path } ?>
 					<li class="method" data-search-term="[?attr method.name ?]"><a
 						title="[?call method.parent.full_name ?]"
-						href="[?call method.path ?]"><?call method.pretty_name ?>
+						href="/[?call method.path ?]"><?call method.pretty_name ?>
 						<span class="method-parent">[<?call
 							method.parent.full_name.sub(/.*(::)/, '\\1') ?>]</span>
 						</a>

@@ -1,6 +1,14 @@
 # Release History for rdoc-generator-sixfish
 
 ---
+
+## v0.2.1 [2022-12-22] Michael Granger <ged@faeriemud.org>
+
+Bugfixes:
+
+- Fix method links for child classes; thanks to Mahlon E. Smith for the patch.
+
+
 ## v0.2.0 [2022-12-01] Michael Granger <ged@faeriemud.org>
 
 Fixes:

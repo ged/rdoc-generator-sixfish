@@ -1,6 +1,12 @@
 # Release History for rdoc-generator-sixfish
 
 ---
+## v0.3.0 [2023-01-02] Michael Granger <ged@faeriemud.org>
+
+Changes:
+
+- Unfloat/unbox definition lists other than class metadata.
+
 
 ## v0.2.1 [2022-12-22] Michael Granger <ged@faeriemud.org>
 

@@ -6,7 +6,7 @@
 module Sixfish
 
 	# Library version constant
-	VERSION = '0.2.1'
+	VERSION = '0.3.0'
 
 	# Fivefish project URL
 	PROJECT_URL = 'https://hg.sr.ht/~ged/Sixfish'

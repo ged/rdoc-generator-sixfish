@@ -13,7 +13,7 @@ module Sixfish::Patches
 		:LABEL  => ['<dl class="rdoc-list label-list">',         '</dl>'],
 		:LALPHA => ['<ol style="list-style-type: lower-alpha">', '</ol>'],
 		:NOTE   => [
-			'<table class="rdoc-list note-list table box"><tbody>',
+			'<table class="rdoc-list note-list table"><tbody>',
 			'</tbody></table>'
 		],
 		:NUMBER => ['<ol>',                                      '</ol>'],

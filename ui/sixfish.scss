@@ -98,7 +98,8 @@ section.api section {
 }
 
 a[name]:has(+ div.method) {
-	display: none;
+	display: block;
+	margin-top: 1em;
 }
 
 table.class-metadata {

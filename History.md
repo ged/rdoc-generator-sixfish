@@ -1,6 +1,13 @@
 # Release History for rdoc-generator-sixfish
 
 ---
+## v0.3.1 [2024-03-04] Michael Granger <ged@faeriemud.org>
+
+Bugfixes:
+
+- Fix broken a[name] links
+
+
 ## v0.3.0 [2023-01-02] Michael Granger <ged@faeriemud.org>
 
 Changes:

@@ -1,6 +1,13 @@
 # Release History for rdoc-generator-sixfish
 
 ---
+## v0.4.0 [2026-04-15] Michael Granger <ged@faeriemud.org>
+
+- Add Gem datadir refinement to work around breaking change
+
+  See https://github.com/ruby/rubygems/pull/8900
+
+
 ## v0.3.1 [2024-03-04] Michael Granger <ged@faeriemud.org>
 
 Bugfixes:

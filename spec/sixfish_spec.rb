@@ -1,11 +1,11 @@
 # -*- ruby -*-
-#encoding: utf-8
 
-require 'helpers'
+require_relative 'helpers'
+
 require 'rspec'
 require 'sixfish'
 
-describe Sixfish do
+RSpec.describe( Sixfish ) do
 
 	describe "version methods" do
 

@@ -1,5 +1,4 @@
 # -*- ruby -*-
-#encoding: utf-8
 
 require_relative '../../helpers'
 
@@ -7,7 +6,7 @@ require 'tmpdir'
 require 'rspec'
 require 'rdoc/generator/sixfish'
 
-describe RDoc::Generator::Sixfish do
+RSpec.describe( RDoc::Generator::Sixfish ) do
 
 	# Lots of the setup and the examples in this file are ported from
 	# the test_rdoc_generator_darkfish.rb file from RDoc itself.
@@ -29,7 +28,7 @@ describe RDoc::Generator::Sixfish do
 		@options.template_dir = @datadir.to_s
 
 		@tmpdir.mkpath
-		@store = RDoc::Store.new( @storefile.to_s )
+		@store = RDoc::Store.new( @options, path: @storefile.to_s )
 		@store.load_cache
 
 		$stderr.puts "Tmpdir is: %s" % [@tmpdir] if ENV['SIXFISH_DEVELMODE']

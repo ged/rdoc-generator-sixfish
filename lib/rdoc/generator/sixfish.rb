@@ -9,10 +9,14 @@ require 'fileutils'
 require 'pathname'
 require 'rdoc/rdoc'
 require 'rdoc/generator/json_index'
+require 'rubygems/datadir'
 
 require 'inversion/template/striptag'
 
 require 'sixfish'
+
+using Gem::DataDirRefinements
+
 
 # The Sixfish generator class.
 class RDoc::Generator::Sixfish
